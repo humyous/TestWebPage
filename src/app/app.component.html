@@ -1,0 +1,20 @@
+<!-- The content below is to route to new pages -->
+<body>
+  <h1>{{title}}</h1>
+  <script>
+  
+  
+  
+
+  </script>
+  <nav>
+    <button (click)="goSomewhere('/audiotest')">Audio Test</button>
+    <button (click)="goSomewhere('/lpTagTest')">LpTagTest</button>
+    <button (click)="reloadthis(); goSomewhere('/stepUp')">Step Up Authentication</button>
+    <button (click)="goBack()">Back</button>
+
+  </nav>
+  
+  
+
+  <router-outlet></router-outlet>
