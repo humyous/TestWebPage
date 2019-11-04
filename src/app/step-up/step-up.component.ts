@@ -34,13 +34,12 @@ export class StepUpComponent implements OnInit{
       callback ({
         iss: "humza",
         acr: "loa1",
-        sub: "tests"
+        sub: "test"
       });
       
     }
-    this.lpTag.identities = [];
-    this.lpTag.identities.push(identityfn);
-
+    this.window.lpTag.identities = this.window.lpTag.identities || [];
+    this.window.lpTag.identities.push(identityfn);
     
   }
 
@@ -55,12 +54,4 @@ export class StepUpComponent implements OnInit{
 
   }
 
-}
-
-function identityfn(callback){
-  // callback({
-  //   iss: "humza",
-  //   acr: "loa1",
-  //   sub: "tests"
-  //   });
 }
